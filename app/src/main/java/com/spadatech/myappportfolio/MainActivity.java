@@ -1,38 +1,62 @@
 package com.spadatech.myappportfolio;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private Button btnSpotify;
+    private Button btnScores;
+    private Button btnLibrary;
+    private Button btnBIB;
+    private Button btnXYZ;
+    private Button btnCapstone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btnSpotify = (Button) findViewById(R.id.btnSpotify);
+        btnScores = (Button) findViewById(R.id.btnScores);
+        btnLibrary = (Button) findViewById(R.id.btnLibrary);
+        btnBIB = (Button) findViewById(R.id.btnBIB);
+        btnXYZ = (Button) findViewById(R.id.btnXYZ);
+        btnCapstone = (Button) findViewById(R.id.btnCapstone);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    public void buttonClicked(View btn){
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        String message = "";
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if(btn.getId() == btnSpotify.getId()){
+            message = "This button will launch my Spotify app!";
+        }
+        else if(btn.getId() == btnScores.getId()){
+            message = "This button will launch my Scores app!";
+        }
+        else if(btn.getId() == btnLibrary.getId()){
+            message = "This button will launch my Library app!";
+        }
+        else if(btn.getId() == btnBIB.getId()){
+            message = "This button will launch my BIB app!";
+        }
+        else if(btn.getId() == btnXYZ.getId()){
+            message = "This button will launch my Reader app!";
+        }
+        else if(btn.getId() == btnCapstone.getId()){
+            message = "This button will launch my Capstone app!";
+        }else{
+            message = "Error #1";
         }
 
-        return super.onOptionsItemSelected(item);
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+
+        //Error #1 = btn.getID() did not match any of the if/else cases
     }
+
 }

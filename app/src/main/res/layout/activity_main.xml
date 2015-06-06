@@ -5,7 +5,165 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutTitle"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#00BCD4"
+            android:text="My Nanodegree Applications"
+            android:id="@+id/tvTitle"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayoutTitle"
+        android:layout_marginTop="20dp">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0.5"
+            android:layout_margin="5dp">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnSpotify"
+                    android:background="@drawable/btn_custom"
+                    android:text="Spotify Streamer"
+                    android:textColor="@color/background_floating_material_dark"
+                    android:textSize="13sp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:layout_margin="20dp"
+                    android:onClick="buttonClicked"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="10dp">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnScores"
+                    android:background="@drawable/btn_custom"
+                    android:text="Scores App"
+                    android:textColor="@color/background_floating_material_dark"
+                    android:textSize="13sp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:layout_margin="20dp"
+                    android:onClick="buttonClicked"/>
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0.5"
+            android:layout_margin="5dp">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnLibrary"
+                    android:background="@drawable/btn_custom"
+                    android:text="Library App"
+                    android:textColor="@color/background_floating_material_dark"
+                    android:textSize="13sp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    android:onClick="buttonClicked"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="10dp">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnBIB"
+                    android:background="@drawable/btn_custom"
+                    android:text="Build It Bigger"
+                    android:textColor="@color/background_floating_material_dark"
+                    android:textSize="13sp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    android:onClick="buttonClicked"/>
+
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0.5"
+            android:layout_margin="5dp">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnXYZ"
+                    android:background="@drawable/btn_custom"
+                    android:text="XYZ Reader"
+                    android:textColor="@color/background_floating_material_dark"
+                    android:textSize="13sp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    android:onClick="buttonClicked"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="10dp">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnCapstone"
+                    android:background="@drawable/btn_custom"
+                    android:text="Capstone"
+                    android:textColor="@color/background_floating_material_dark"
+                    android:textSize="13sp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    android:onClick="buttonClicked"/>
+
+            </RelativeLayout>
+        </TableRow>
+
+    </TableLayout>
+
 
 </RelativeLayout>
